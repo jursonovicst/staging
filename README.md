@@ -45,7 +45,7 @@ docker build -t staging .
 ## Run
 
 ```
-docker run --cap-add=NET_ADMIN -p 53:53 -p 53:53/udp staging
+docker run --cap-add=NET_ADMIN --sysctl net.ipv6.route.max_size=16384 -p 53:53 -p 53:53/udp staging
 ```
 
 ## Use
