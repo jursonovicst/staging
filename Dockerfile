@@ -16,6 +16,9 @@ RUN apt-get update && apt-get -y install pdns-recursor && mkdir -p /var/run/pdns
 
 EXPOSE 53 53/udp
 
+ADD akamai.lua /akamai.lua
+
 ENTRYPOINT [ "/usr/sbin/pdns_recursor" ]
 
-CMD [ "--daemon=no", "--local-address=0.0.0.0", "--forward-zones=.=8.8.8.8", "--loglevel=3" ]
+CMD [ "--daemon=no", "--local-address=0.0.0.0", "--lua-dns-script=/akamai.lua" ]
+
