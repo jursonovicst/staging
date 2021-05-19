@@ -22,7 +22,7 @@ Address: 23.50.xxx.xxx
 Standard name resolution (via Google):
 
 ```
-~ % nslookup svc40.main.ak.t-online.de 8.8.8.8  
+~ % nslookup xxxxxx.main.ak.t-online.de 8.8.8.8  
 Server:		8.8.8.8
 Address:	8.8.8.8#53
 
